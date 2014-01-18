@@ -1,4 +1,4 @@
-# SimpleHttp
+# Tiny HTTP Client
 
 A really simple http client, get content by url:
 
