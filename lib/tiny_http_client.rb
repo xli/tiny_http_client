@@ -8,7 +8,7 @@ module TinyHttpClient
     uri = URI(url)
     http_opts = { use_ssl: uri.scheme == 'https' }
     Net::HTTP.start uri.host, uri.port, http_opts do |https|
-      req = Net::HTTP::Get.new(uri.path)
+      req = Net::HTTP::Get.new(uri)
       yield(req) if block_given?
       case res = https.request(req)
       when Net::HTTPSuccess
